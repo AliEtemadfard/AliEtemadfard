@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Ali Etemadfard — AI Engineer and aspiring AI researcher</title>
+  <desc id="desc">Learning, building, and exploring intelligent systems</desc>
+
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset=".52" stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset=".5" stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".17"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+    <filter id="nodeGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .ink { fill: #172033; }
+      .muted { fill: #526072; }
+      .synapses { fill: none; stroke: url(#wire); stroke-width: 1.15; stroke-opacity: .17; }
+      .synapses path { stroke-dasharray: 9 16; animation: signalFlow 14s linear infinite; }
+      .synapses path:nth-child(3n+2) { animation-duration: 18s; animation-direction: reverse; }
+      .synapses path:nth-child(3n) { animation-duration: 22s; }
+      .neurons circle { fill: #22D3EE; filter: url(#nodeGlow); animation: neuronPulse 4.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .neurons circle:nth-child(3n+2) { fill: #3B82F6; animation-delay: -1.5s; }
+      .neurons circle:nth-child(3n) { fill: #06B6D4; animation-delay: -3s; }
+      .ambient { animation: breathe 6s ease-in-out infinite; transform-origin: center; }
+      .core { animation: corePulse 4.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes signalFlow { to { stroke-dashoffset: -150; } }
+      @keyframes neuronPulse { 0%, 100% { opacity: .48; transform: scale(.78); } 50% { opacity: 1; transform: scale(1.22); } }
+      @keyframes breathe { 0%, 100% { opacity: .65; transform: scale(.95); } 50% { opacity: 1; transform: scale(1.04); } }
+      @keyframes corePulse { 0%, 100% { opacity: .7; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.1); } }
+      @media (prefers-color-scheme: dark) {
+        .ink { fill: #F0F6FC; }
+        .muted { fill: #A7B3C2; }
+        .synapses { stroke-opacity: .27; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .synapses path, .neurons circle, .ambient, .core { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <ellipse class="ambient" cx="600" cy="150" rx="390" ry="132" fill="url(#glow)" filter="url(#soft)"/>
+
+  <!-- Layered neural connections: input → hidden → latent -->
+  <g class="synapses">
+    <path d="M52 72 160 45M52 72l108 55M52 132l108-87M52 132l108-5M52 132l108 78M52 192l108-65M52 192l108 18M52 252l108-42M52 252l108 55"/>
+    <path d="M160 45l132 34M160 45l132 92M160 127l132-48M160 127l132 10M160 127l132 73M160 210l132-73M160 210l132-10M160 210l132 62M160 270l132-70M160 270l132 2"/>
+    <path d="M292 79l112 30M292 79l112 77M292 137l112-28M292 137l112 19M292 137l112 57M292 200l112-44M292 200l112-6M292 272l112-78"/>
+
+    <path d="M1148 72 1040 45M1148 72l-108 55M1148 132l-108-87M1148 132l-108-5M1148 132l-108 78M1148 192l-108-65M1148 192l-108 18M1148 252l-108-42M1148 252l-108 55"/>
+    <path d="M1040 45 908 79M1040 45l-132 92M1040 127l-132-48M1040 127l-132 10M1040 127l-132 73M1040 210l-132-73M1040 210l-132-10M1040 210l-132 62M1040 270 908 200M1040 270l-132 2"/>
+    <path d="M908 79 796 109M908 79l-112 77M908 137l-112-28M908 137l-112 19M908 137l-112 57M908 200l-112-44M908 200l-112-6M908 272l-112-78"/>
+  </g>
+
+  <!-- Neuron layers -->
+  <g class="neurons">
+    <circle cx="52" cy="72" r="4"/><circle cx="52" cy="132" r="4"/><circle cx="52" cy="192" r="4"/><circle cx="52" cy="252" r="4"/>
+    <circle cx="160" cy="45" r="4"/><circle cx="160" cy="127" r="5"/><circle cx="160" cy="210" r="4"/><circle cx="160" cy="270" r="4"/>
+    <circle cx="292" cy="79" r="5"/><circle cx="292" cy="137" r="4"/><circle cx="292" cy="200" r="5"/><circle cx="292" cy="272" r="4"/>
+    <circle cx="404" cy="109" r="4"/><circle cx="404" cy="156" r="5"/><circle cx="404" cy="194" r="4"/>
+
+    <circle cx="1148" cy="72" r="4"/><circle cx="1148" cy="132" r="4"/><circle cx="1148" cy="192" r="4"/><circle cx="1148" cy="252" r="4"/>
+    <circle cx="1040" cy="45" r="4"/><circle cx="1040" cy="127" r="5"/><circle cx="1040" cy="210" r="4"/><circle cx="1040" cy="270" r="4"/>
+    <circle cx="908" cy="79" r="5"/><circle cx="908" cy="137" r="4"/><circle cx="908" cy="200" r="5"/><circle cx="908" cy="272" r="4"/>
+    <circle cx="796" cy="109" r="4"/><circle cx="796" cy="156" r="5"/><circle cx="796" cy="194" r="4"/>
+  </g>
+
+  <g text-anchor="middle" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+    <text x="600" y="82" class="muted" font-size="13" font-weight="650" letter-spacing="3.6">AI ENGINEER · ASPIRING AI RESEARCHER</text>
+    <text x="600" y="154" class="ink" font-size="54" font-weight="720" letter-spacing="-1.5">Ali Etemadfard</text>
+    <rect x="468" y="178" width="264" height="2" rx="1" fill="url(#accent)"/>
+    <text x="600" y="216" class="muted" font-size="18" font-weight="400" letter-spacing=".55">Learning, building, and exploring intelligent systems</text>
+  </g>
+
+  <g class="core" transform="translate(583 248)" fill="none" stroke="url(#accent)" stroke-width="1.7">
+    <circle cx="4" cy="8" r="4" fill="#2563EB" stroke="none"/>
+    <circle cx="30" cy="2" r="4" fill="#06B6D4" stroke="none"/>
+    <circle cx="30" cy="20" r="4" fill="#22D3EE" stroke="none"/>
+    <path d="M8 7 26 3M8 10l18 9M30 6v10"/>
+  </g>
+</svg>
